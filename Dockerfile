@@ -21,6 +21,6 @@ RUN adduser -D myuser
 USER myuser
  
 # Run the app
-CMD gunicorn --bind 0.0.0.0:$PORT wsgi
+CMD gunicorn --bind 0.0.0.0:$PORT wsgi --timeout 120 app:app
 
 
